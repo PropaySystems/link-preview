@@ -1,15 +1,15 @@
 <?php
 
-namespace Dusterio\LinkPreview\Parsers;
+namespace Propay\LinkPreview\Parsers;
 
-use Dusterio\LinkPreview\Contracts\LinkInterface;
-use Dusterio\LinkPreview\Contracts\PreviewInterface;
-use Dusterio\LinkPreview\Contracts\ReaderInterface;
-use Dusterio\LinkPreview\Contracts\ParserInterface;
-use Dusterio\LinkPreview\Exceptions\ConnectionErrorException;
-use Dusterio\LinkPreview\Models\Link;
-use Dusterio\LinkPreview\Readers\HttpReader;
-use Dusterio\LinkPreview\Models\HtmlPreview;
+use Propay\LinkPreview\Contracts\LinkInterface;
+use Propay\LinkPreview\Contracts\PreviewInterface;
+use Propay\LinkPreview\Contracts\ReaderInterface;
+use Propay\LinkPreview\Contracts\ParserInterface;
+use Propay\LinkPreview\Exceptions\ConnectionErrorException;
+use Propay\LinkPreview\Models\Link;
+use Propay\LinkPreview\Readers\HttpReader;
+use Propay\LinkPreview\Models\HtmlPreview;
 use Symfony\Component\DomCrawler\Crawler;
 
 /**
@@ -93,7 +93,7 @@ class HtmlParser extends BaseParser implements ParserInterface
     /**
      * @inheritdoc
      */
-    public function canParseLink(LinkInterface $link)
+    public function canParseLink(LinkInterface $link): bool
     {
         return !filter_var($link->getUrl(), FILTER_VALIDATE_URL) === false;
     }
@@ -101,7 +101,7 @@ class HtmlParser extends BaseParser implements ParserInterface
     /**
      * @inheritdoc
      */
-    public function parseLink(LinkInterface $link)
+    public function parseLink(LinkInterface $link): static
     {
         $link = $this->readLink($link);
 

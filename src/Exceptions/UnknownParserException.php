@@ -1,10 +1,10 @@
 <?php
 
-namespace Dusterio\LinkPreview\Exceptions;
+namespace Propay\LinkPreview\Exceptions;
 
 /**
  * Class UnknownParserException
- * @package Dusterio\LinkPreview\Exceptions
+ * @package Propay\LinkPreview\Exceptions
  * @codeCoverageIgnore
  */
 class UnknownParserException extends \Exception

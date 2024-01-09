@@ -1,9 +1,9 @@
 <?php
 
-namespace Dusterio\LinkPreview\Readers;
+namespace Propay\LinkPreview\Readers;
 
-use Dusterio\LinkPreview\Contracts\LinkInterface;
-use Dusterio\LinkPreview\Contracts\ReaderInterface;
+use Propay\LinkPreview\Contracts\LinkInterface;
+use Propay\LinkPreview\Contracts\ReaderInterface;
 use GuzzleHttp\Client;
 use GuzzleHttp\Cookie\CookieJar;
 use GuzzleHttp\TransferStats;
@@ -42,7 +42,7 @@ class HttpReader implements ReaderInterface
             'cookies' => $this->jar,
             'connect_timeout' => 5,
             'headers' => [
-                'User-Agent' => 'dusterio/link-preview v1.2'
+                'User-Agent' => 'Propay/link-preview v1.2'
             ]
         ];
     }

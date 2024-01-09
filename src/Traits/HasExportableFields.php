@@ -1,6 +1,6 @@
 <?php
 
-namespace Dusterio\LinkPreview\Traits;
+namespace Propay\LinkPreview\Traits;
 
 trait HasExportableFields
 {

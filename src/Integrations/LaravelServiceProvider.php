@@ -1,12 +1,12 @@
 <?php
-namespace Dusterio\LinkPreview\Integrations;
+namespace Propay\LinkPreview\Integrations;
 
 use Illuminate\Support\ServiceProvider;
-use Dusterio\LinkPreview\Client;
+use Propay\LinkPreview\Client;
 
 /**
  * Class LaravelServiceProvider
- * @package Dusterio\LinkPreview\Integrations
+ * @package Propay\LinkPreview\Integrations
  * @codeCoverageIgnore
  */
 class LaravelServiceProvider extends ServiceProvider

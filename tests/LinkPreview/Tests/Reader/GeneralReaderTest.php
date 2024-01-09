@@ -1,8 +1,8 @@
 <?php
 
-namespace Dusterio\LinkPreview\Tests\Reader;
+namespace Propay\LinkPreview\Tests\Reader;
 
-use Dusterio\LinkPreview\Readers\HttpReader;
+use Propay\LinkPreview\Readers\HttpReader;
 
 class GeneralReaderTest extends \PHPUnit_Framework_TestCase
 {
@@ -49,7 +49,7 @@ class GeneralReaderTest extends \PHPUnit_Framework_TestCase
             ->method('request')
             ->will(self::returnValue($responseMock));
 
-        $linkMock = $this->getMock('Dusterio\LinkPreview\Models\Link', null, ['http://www.google.com']);
+        $linkMock = $this->getMock('Propay\LinkPreview\Models\Link', null, ['http://www.google.com']);
 
         $reader = new HttpReader();
         $reader->setClient($clientMock);

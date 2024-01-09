@@ -1,8 +1,8 @@
 <?php
 
-namespace Dusterio\LinkPreview\Tests;
+namespace Propay\LinkPreview\Tests;
 
-use Dusterio\LinkPreview\Client;
+use Propay\LinkPreview\Client;
 
 class LinkPreviewTest extends \PHPUnit_Framework_TestCase
 {
@@ -22,8 +22,8 @@ class LinkPreviewTest extends \PHPUnit_Framework_TestCase
      */
     public function can_add_extra_parsers()
     {
-        $generalParserMock = $this->getMock('Dusterio\LinkPreview\Parsers\HtmlParser', null);
-        $youtubeParserMock = $this->getMock('Dusterio\LinkPreview\Parsers\YouTubeParser', null);
+        $generalParserMock = $this->getMock('Propay\LinkPreview\Parsers\HtmlParser', null);
+        $youtubeParserMock = $this->getMock('Propay\LinkPreview\Parsers\YouTubeParser', null);
 
         $linkPreview = new Client('http://www.google.com');
 
@@ -45,10 +45,10 @@ class LinkPreviewTest extends \PHPUnit_Framework_TestCase
      */
     public function can_parse_an_html_page()
     {
-        $linkMock = $this->getMock('Dusterio\LinkPreview\Models\Link', null, ['http://www.google.com']);
+        $linkMock = $this->getMock('Propay\LinkPreview\Models\Link', null, ['http://www.google.com']);
 
-        $generalParserMock = $this->getMock('Dusterio\LinkPreview\Parsers\HtmlParser');
-        $previewMock = $this->getMock('Dusterio\LinkPreview\Models\HtmlPreview');
+        $generalParserMock = $this->getMock('Propay\LinkPreview\Parsers\HtmlParser');
+        $previewMock = $this->getMock('Propay\LinkPreview\Models\HtmlPreview');
 
         $generalParserMock->expects(self::once())
             ->method('canParseLink')
@@ -100,6 +100,6 @@ class LinkPreviewTest extends \PHPUnit_Framework_TestCase
     {
         $linkPreview = new Client('https://www.youtube.com/watch?v=ycGfvA1vkR8');
         $parsedLink = $linkPreview->getPreview('youtube');
-        self::assertInstanceOf('Dusterio\LinkPreview\Models\VideoPreview', $parsedLink);
+        self::assertInstanceOf('Propay\LinkPreview\Models\VideoPreview', $parsedLink);
     }
 }

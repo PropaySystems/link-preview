@@ -1,11 +1,11 @@
 # Link Preview 
-[![Build Status](https://travis-ci.org/dusterio/link-preview.svg)](https://travis-ci.org/dusterio/link-preview)
-[![Code Climate](https://codeclimate.com/github/dusterio/link-preview/badges/gpa.svg)](https://codeclimate.com/github/dusterio/link-preview/badges)
-[![Test Coverage](https://codeclimate.com/github/dusterio/link-preview/badges/coverage.svg)](https://codeclimate.com/github/dusterio/link-preview/badges)
-[![Total Downloads](https://poser.pugx.org/dusterio/link-preview/d/total.svg)](https://packagist.org/packages/dusterio/link-preview)
-[![Latest Stable Version](https://poser.pugx.org/dusterio/link-preview/v/stable.svg)](https://packagist.org/packages/dusterio/link-preview)
-[![Latest Unstable Version](https://poser.pugx.org/dusterio/link-preview/v/unstable.svg)](https://packagist.org/packages/dusterio/link-preview)
-[![License](https://poser.pugx.org/dusterio/link-preview/license.svg)](https://packagist.org/packages/dusterio/link-preview)
+[![Build Status](https://travis-ci.org/Propay/link-preview.svg)](https://travis-ci.org/Propay/link-preview)
+[![Code Climate](https://codeclimate.com/github/Propay/link-preview/badges/gpa.svg)](https://codeclimate.com/github/Propay/link-preview/badges)
+[![Test Coverage](https://codeclimate.com/github/Propay/link-preview/badges/coverage.svg)](https://codeclimate.com/github/Propay/link-preview/badges)
+[![Total Downloads](https://poser.pugx.org/Propay/link-preview/d/total.svg)](https://packagist.org/packages/Propay/link-preview)
+[![Latest Stable Version](https://poser.pugx.org/Propay/link-preview/v/stable.svg)](https://packagist.org/packages/Propay/link-preview)
+[![Latest Unstable Version](https://poser.pugx.org/Propay/link-preview/v/unstable.svg)](https://packagist.org/packages/Propay/link-preview)
+[![License](https://poser.pugx.org/Propay/link-preview/license.svg)](https://packagist.org/packages/Propay/link-preview)
 
 A PHP class that consumes an HTTP(S) link and returns an array of preview information. Think of Facebook sharing -
 whenever you paste a link, it goes to specified page and fetches some details.
@@ -25,7 +25,7 @@ Includes integrations with: Laravel 5
 To install simply run:
 
 ```
-composer require dusterio/link-preview
+composer require Propay/link-preview
 ```
 
 Or add it to `composer.json` manually:
@@ -33,7 +33,7 @@ Or add it to `composer.json` manually:
 ```json
 {
     "require": {
-        "dusterio/link-preview": "~1.2"
+        "Propay/link-preview": "~1.2"
     }
 }
 ```
@@ -41,7 +41,7 @@ Or add it to `composer.json` manually:
 ## Direct usage
 
 ```php
-use Dusterio\LinkPreview\Client;
+use Propay\LinkPreview\Client;
 
 $previewClient = new Client('https://www.boogiecall.com/en/Melbourne');
 
@@ -87,7 +87,7 @@ $previewClient->getParser('general')->getReader()->config(['allow_redirects' => 
 // If there is a network error (DNS, connect, etc), we throw ConnectionErrorException
 try {
     $previews = $previewClient->getPreviews();
-} catch (\Dusterio\LinkPreview\Exceptions\ConnectionErrorException $e) {
+} catch (\Propay\LinkPreview\Exceptions\ConnectionErrorException $e) {
     echo "Oh no!";
 }
 ```
@@ -95,7 +95,7 @@ try {
 ### YouTube example
 
 ```php
-use Dusterio\LinkPreview\Client;
+use Propay\LinkPreview\Client;
 
 $previewClient = new LinkPreview('https://www.youtube.com/watch?v=v1uKhwN6FtA');
 
@@ -123,12 +123,12 @@ array(2) {
 
 'providers' => [
     '...',
-    'Dusterio\LinkPreview\Integrations\LaravelServiceProvider',
+    'Propay\LinkPreview\Integrations\LaravelServiceProvider',
 ];
 
 'aliases' => [
     '...',
-    'Preview'    => 'Dusterio\LinkPreview\Integrations\LaravelFacade',
+    'Preview'    => 'Propay\LinkPreview\Integrations\LaravelFacade',
 ];
 
 // Set target url

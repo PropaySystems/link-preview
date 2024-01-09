@@ -1,7 +1,7 @@
 <?php
 
-namespace Dusterio\LinkPreview\Contracts;
-use Dusterio\LinkPreview\Models\Preview;
+namespace Propay\LinkPreview\Contracts;
+use Propay\LinkPreview\Models\VideoPreview;
 
 /**
  * Interface ParserInterface
@@ -51,12 +51,12 @@ interface ParserInterface
      * @param LinkInterface $link
      * @return boolean
      */
-    public function canParseLink(LinkInterface $link);
+    public function canParseLink(LinkInterface $link): bool;
 
     /**
      * Parse link
      * @param LinkInterface $link
      * @return $this
      */
-    public function parseLink(LinkInterface $link);
+    public function parseLink(LinkInterface $link): static;
 }

@@ -1,10 +1,10 @@
 <?php
 
-namespace Dusterio\LinkPreview\Exceptions;
+namespace Propay\LinkPreview\Exceptions;
 
 /**
  * Class MalformedUrlException
- * @package Dusterio\LinkPreview\Exceptions
+ * @package Propay\LinkPreview\Exceptions
  * @codeCoverageIgnore
  */
 class MalformedUrlException extends \Exception

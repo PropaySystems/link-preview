@@ -1,10 +1,10 @@
 <?php
 
-namespace Dusterio\LinkPreview\Models;
+namespace Propay\LinkPreview\Models;
 
-use Dusterio\LinkPreview\Contracts\PreviewInterface;
-use Dusterio\LinkPreview\Traits\HasExportableFields;
-use Dusterio\LinkPreview\Traits\HasImportableFields;
+use Propay\LinkPreview\Contracts\PreviewInterface;
+use Propay\LinkPreview\Traits\HasExportableFields;
+use Propay\LinkPreview\Traits\HasImportableFields;
 
 /**
  * Class VideoLink

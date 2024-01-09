@@ -1,6 +1,6 @@
 <?php
 
-namespace Dusterio\LinkPreview\Contracts;
+namespace Propay\LinkPreview\Contracts;
 
 /**
  * Interface LinkInterface

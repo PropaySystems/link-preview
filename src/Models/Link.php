@@ -1,9 +1,9 @@
 <?php
 
-namespace Dusterio\LinkPreview\Models;
+namespace Propay\LinkPreview\Models;
 
-use Dusterio\LinkPreview\Contracts\LinkInterface;
-use Dusterio\LinkPreview\Exceptions\MalformedUrlException;
+use Propay\LinkPreview\Contracts\LinkInterface;
+use Propay\LinkPreview\Exceptions\MalformedUrlException;
 
 /**
  * Class Link

@@ -1,13 +1,13 @@
 <?php
 
-namespace Dusterio\LinkPreview\Parsers;
+namespace Propay\LinkPreview\Parsers;
 
-use Dusterio\LinkPreview\Contracts\LinkInterface;
-use Dusterio\LinkPreview\Contracts\ReaderInterface;
-use Dusterio\LinkPreview\Contracts\ParserInterface;
-use Dusterio\LinkPreview\Contracts\PreviewInterface;
-use Dusterio\LinkPreview\Models\VideoPreview;
-use Dusterio\LinkPreview\Readers\HttpReader;
+use Propay\LinkPreview\Contracts\LinkInterface;
+use Propay\LinkPreview\Contracts\ReaderInterface;
+use Propay\LinkPreview\Contracts\ParserInterface;
+use Propay\LinkPreview\Contracts\PreviewInterface;
+use Propay\LinkPreview\Models\VideoPreview;
+use Propay\LinkPreview\Readers\HttpReader;
 
 /**
  * Class YouTubeParser
@@ -40,7 +40,7 @@ class VimeoParser extends BaseParser implements ParserInterface
     /**
      * @inheritdoc
      */
-    public function canParseLink(LinkInterface $link)
+    public function canParseLink(LinkInterface $link): bool
     {
         return (preg_match(static::PATTERN, $link->getUrl()));
     }
@@ -48,7 +48,7 @@ class VimeoParser extends BaseParser implements ParserInterface
     /**
      * @inheritdoc
      */
-    public function parseLink(LinkInterface $link)
+    public function parseLink(LinkInterface $link): static
     {
         preg_match(static::PATTERN, $link->getUrl(), $matches);
 
