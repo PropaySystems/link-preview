@@ -1,11 +1,11 @@
 # Link Preview 
-[![Build Status](https://travis-ci.org/Propay/link-preview.svg)](https://travis-ci.org/Propay/link-preview)
-[![Code Climate](https://codeclimate.com/github/Propay/link-preview/badges/gpa.svg)](https://codeclimate.com/github/Propay/link-preview/badges)
-[![Test Coverage](https://codeclimate.com/github/Propay/link-preview/badges/coverage.svg)](https://codeclimate.com/github/Propay/link-preview/badges)
-[![Total Downloads](https://poser.pugx.org/Propay/link-preview/d/total.svg)](https://packagist.org/packages/Propay/link-preview)
-[![Latest Stable Version](https://poser.pugx.org/Propay/link-preview/v/stable.svg)](https://packagist.org/packages/Propay/link-preview)
-[![Latest Unstable Version](https://poser.pugx.org/Propay/link-preview/v/unstable.svg)](https://packagist.org/packages/Propay/link-preview)
-[![License](https://poser.pugx.org/Propay/link-preview/license.svg)](https://packagist.org/packages/Propay/link-preview)
+[![Build Status](https://travis-ci.org/propay/link-preview.svg)](https://travis-ci.org/propay/link-preview)
+[![Code Climate](https://codeclimate.com/github/propay/link-preview/badges/gpa.svg)](https://codeclimate.com/github/propay/link-preview/badges)
+[![Test Coverage](https://codeclimate.com/github/propay/link-preview/badges/coverage.svg)](https://codeclimate.com/github/propay/link-preview/badges)
+[![Total Downloads](https://poser.pugx.org/propay/link-preview/d/total.svg)](https://packagist.org/packages/propay/link-preview)
+[![Latest Stable Version](https://poser.pugx.org/propay/link-preview/v/stable.svg)](https://packagist.org/packages/propay/link-preview)
+[![Latest Unstable Version](https://poser.pugx.org/propay/link-preview/v/unstable.svg)](https://packagist.org/packages/propay/link-preview)
+[![License](https://poser.pugx.org/propay/link-preview/license.svg)](https://packagist.org/packages/propay/link-preview)
 
 A PHP class that consumes an HTTP(S) link and returns an array of preview information. Think of Facebook sharing -
 whenever you paste a link, it goes to specified page and fetches some details.
@@ -25,7 +25,7 @@ Includes integrations with: Laravel 5
 To install simply run:
 
 ```
-composer require Propay/link-preview
+composer require propay/link-preview
 ```
 
 Or add it to `composer.json` manually:
@@ -33,7 +33,7 @@ Or add it to `composer.json` manually:
 ```json
 {
     "require": {
-        "Propay/link-preview": "~1.2"
+        "propay/link-preview": "~1.2"
     }
 }
 ```

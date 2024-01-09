@@ -1,9 +1,9 @@
 {
-    "name": "Propay/link-preview",
+    "name": "propay/link-preview",
     "type": "library",
     "description": "Link preview generation for PHP with Laravel support",
     "keywords": ["php","url","scraping","laravel","preview"],
-    "homepage": "http://github.com/Propay/link-preview",
+    "homepage": "http://github.com/propay/link-preview",
     "license": "MIT",
     "authors": [
         {
