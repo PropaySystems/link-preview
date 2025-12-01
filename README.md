@@ -33,7 +33,7 @@ Or add it to `composer.json` manually:
 ```json
 {
     "require": {
-        "propay/link-preview": "^1.3",
+        "propay/link-preview": "^1.4",
     }
 }
 ```
